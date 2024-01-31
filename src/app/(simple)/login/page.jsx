@@ -12,7 +12,7 @@ const Login = () => {
                     padding: "20px",
                     borderRadius: "8px"
                 }}>
-                    Estudiante
+                    Estudiantes
                 </Card>
                 <Link href="/"> Home</Link>
             </Grid>
@@ -21,7 +21,7 @@ const Login = () => {
                     padding: "20px",
                     borderRadius: "8px"
                 }}>
-                    Profesor
+                    Profesores
                 </Card>
             </Grid>
         </Grid>
