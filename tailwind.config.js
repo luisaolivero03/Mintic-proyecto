@@ -12,12 +12,12 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          '50': '#eefbf4',
+          '50': '#243c4c', //azul borde
           '100': '#d5f6e3',
           '200': '#afebcb',
           '300': '#7adbae',
           '400': '#44c38d',
-          '500': '#21a872',
+          '500': '#ffffff', //blanco
           '600': '#14875b',
           '700': '#117552',
           '800': '#0f563d',

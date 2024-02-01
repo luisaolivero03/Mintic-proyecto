@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChalkboardTeacher, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faBook, faChalkboardTeacher, faChalkboardUser, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import Imagenizq from '../../../img/6737457-removebg-preview.png'
 
 const Login = () => {
@@ -16,12 +16,13 @@ const Login = () => {
 
 
                 <div className='flex flex-row gap-4 '>
-                    <img
+                    <img className='h-96 w-96'
                         src={Imagenizq.src}
                     />
                     <div className='flex flex-col gap-4 justify-center items-center  '>
-                        <h1 className='text-white text-4xl font-bold'>BIENVENIDOS </h1>
-
+                        <h1 className='text-white text-2xl font-bold justify-center text-center'>BIENVENIDOS <br />
+                            AL PORTAL INSTITUCIONAL</h1>
+                        <p className='text-white text-base font-semibold justify-center text-center'>Selecciona tu rol: </p>
 
                         {!selectedTab ? (
                             <div className='flex flex-row gap-4 justify-center items-center'>
@@ -35,7 +36,7 @@ const Login = () => {
                                 <Card onClick={() => {
                                     setSelectedTab('teacher')
                                 }}>
-                                    <FontAwesomeIcon icon={faGraduationCap} className='w-14 h-14' />
+                                    <FontAwesomeIcon icon={faChalkboardUser} className='w-14 h-14' />
                                     <span>Profesores</span>
                                 </Card>
 
@@ -53,14 +54,54 @@ export default Login;
 
 const Form = ({ variant }) => {
     if (variant === 'teacher') {
-        return <div>formulario de profesor</div>
-    }
+        return <div>
+            <form>
+                <label class="block">
+                    <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+                        Usuario:
+                    </span>
+                    <input type="Identificación" name="Identificación" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Identificación" />
+                </label>
+            </form>
 
-    return <div>formulario de estudiante</div>
+            <form>
+                <label class="block">
+                    <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+                        Contraseña:
+                    </span>
+                    <input type="Fecha de expedicion" name="Fecha de expedición" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Fecha de expedición" />
+                </label>
+            </form>
+
+        </div>
+    }
+    //Formulario estudiante
+    return <div>
+        <form>
+            <label class="block">
+                <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+                    Identificación:
+                </span>
+                <input type="Identificación" name="Identificación" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Identificación" />
+            </label>
+        </form>
+
+        <form>
+            <label class="block">
+                <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+                    Fecha de expedición de tú documento:
+                </span>
+                <input type="Fecha de expedicion" name="Fecha de expedición" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Fecha de expedición" />
+            </label>
+        </form>
+
+
+
+    </div>
 }
 
 const Card = ({ children, ...props }) => {
     return (
-        <div className='p-4 flex flex-col items-center rounded-lg border border-primary-300 shadow-md text-primary-300 hover:text-white hover:bg-primary-300 transition cursor-pointer' {...props}>{children}</div>
+        <div className='p-4 bg-primary-50 flex flex-col items-center rounded-lg border border-primary-500 shadow-md text-primary-500 hover:text-white hover:bg-primary-400 transition cursor-pointer' {...props}>{children}</div>
     )
 }
