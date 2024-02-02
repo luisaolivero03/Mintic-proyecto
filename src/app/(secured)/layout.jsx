@@ -1,11 +1,6 @@
 import { Inter } from "next/font/google";
 import Head from "next/head";
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
+
 import "../globals.css"
 import Layout from '@components/Layout';
 
