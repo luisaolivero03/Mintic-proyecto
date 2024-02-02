@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import "../globals.css"
+import Layout from '@components/Layout';
 
 export const metadata = {
     title: "holap sami",
@@ -22,26 +23,9 @@ export default function RootLayout({ children }) {
                 <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700&display=swap" rel="stylesheet" />
             </Head>
             <body>
-                <Box sx={{ flexGrow: 1 }}>
-                    <AppBar position="static">
-                        <Toolbar>
-                            <IconButton
-                                size="large"
-                                edge="start"
-                                color="inherit"
-                                aria-label="menu"
-                                sx={{ mr: 2 }}
-                            >
-
-                            </IconButton>
-                            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                                News
-                            </Typography>
-                            <Button color="inherit">Login</Button>
-                        </Toolbar>
-                    </AppBar>
-                </Box>
-                {children}
+                <Layout>
+                    {children}
+                </Layout>
             </body>
         </html>
     );
