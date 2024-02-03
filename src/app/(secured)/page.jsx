@@ -3,6 +3,8 @@ import Link from "next/link";
 import Card from "@components/Card";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import IconoCalificaciones from '../../img/icons8-calificaciones-40.png';
+import IconoHorario from '../../img/horario.png';
+import Iconoboletinesycertificados from '../../img/boletinesycertificados.png';
 
 const data1 = {
     username: 'Camilo',
@@ -20,7 +22,7 @@ const data2 = {
 export default function Home() {
 
     return (
-        <main className="flex flex-col items-center justify-between">
+        <main className="flex flex-col items-center justify-between" >
             BIENVENIDOS ¿QUE DESEAS ELEGIR?
             <div className='flex flex-row gap-4 justify-center items-center'>
                 <Card className="bg-primary-500 text-white">
@@ -33,6 +35,7 @@ export default function Home() {
 
 
                 <Card className="bg-primary-500 text-white">
+                    <img src= {IconoHorario.src}/>
                     <Link href="/horario">
                         HORARIOS
 
@@ -40,7 +43,11 @@ export default function Home() {
                 </Card> 
 
                 <Card className="bg-primary-500 text-white">
-                <Link href="/boletinycertificados"> BOLETINES Y CERTIFICADOS
+                    <img src= {Iconoboletinesycertificados.src}/>
+                    <Link href="/boletinycertificados"> 
+                    BOLETINES 
+                    Y 
+                    CERTIFICADOS
                 
                 </Link>
                 </Card>
