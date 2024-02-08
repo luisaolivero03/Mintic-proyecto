@@ -36,7 +36,7 @@ export default function Home() {
 
                 <Card className="bg-primary-500 text-white">
                     <img src= {IconoHorario.src}/>
-                    <Link href="/horario">
+                    <Link href="/horarios">
                         HORARIOS
 
                     </Link>

@@ -1,9 +1,13 @@
 import React from 'react'
-// Esta es tu url localhost:3000/calificaciones
+import Table from "@components/Table"
+
 const Notes = () => {
-  return (
-    <div>Notes</div>
+  return ( 
+    <div>Regresar
+      <Table/>
+    </div> 
   )
+  
 }
 
 export default Notes
