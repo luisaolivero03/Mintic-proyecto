@@ -22,36 +22,41 @@ const data2 = {
 export default function Home() {
 
     return (
-        <main className="flex flex-col items-center justify-between" >
-            BIENVENIDOS ¿QUE DESEAS ELEGIR?
-            <div className='flex flex-row gap-4 justify-center items-center'>
-                <Card className="bg-primary-500 text-white">
-                    <img src= {IconoCalificaciones.src}/>
-                    <Link href="/calificaciones">
-                        CALIFICACIONES
+        <main className="flex flex-col items-center justify-between" style={{ height: '100vh', overflow: 'hidden' }}>
+  BIENVENIDOS ¿QUÉ DESEAS ELEGIR?
+  <div
+    className='flex flex-row gap-10 justify-center items-center'
+    style={{
+      backgroundImage: "url(/fondodecalificaciones.png)",
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      width: '100%',
+      height: '100%', // Ajusta la altura al 100% para cubrir toda la pantalla
+      margin: '0 auto',
+    }}
+  >
+    <Card className="bg-primary-500 text-white" style={{ backgroundColor: "#BCECD1", color: "black" }}>
+      <img src={IconoCalificaciones.src} alt="Icono de Calificaciones" />
+      <Link href="/calificaciones">
+        CALIFICACIONES
+      </Link>
+    </Card>
 
-                    </Link>
-                </Card>
+    <Card className="bg-primary-500 text-white" style={{ backgroundColor: "#BCECD1", color: "black" }}>
+      <img src={IconoHorario.src} alt="Icono de Horario" />
+      <Link href="/horarios">
+        HORARIOS
+      </Link>
+    </Card>
 
+    <Card className="bg-primary-500 text-white" style={{ backgroundColor: "#BCECD1", color: "black" }}>
+      <img src={Iconoboletinesycertificados.src} alt="Icono de Boletines y Certificados" />
+      <Link href="/boletinycertificados"> 
+        BOLETINES Y CERTIFICADOS
+      </Link>
+    </Card>
+  </div>
+</main>
 
-                <Card className="bg-primary-500 text-white">
-                    <img src= {IconoHorario.src}/>
-                    <Link href="/horarios">
-                        HORARIOS
-
-                    </Link>
-                </Card> 
-
-                <Card className="bg-primary-500 text-white">
-                    <img src= {Iconoboletinesycertificados.src}/>
-                    <Link href="/boletinycertificados"> 
-                    BOLETINES 
-                    Y 
-                    CERTIFICADOS
-                
-                </Link>
-                </Card>
-            </div>
-        </main>
-    );
-}
+    )}

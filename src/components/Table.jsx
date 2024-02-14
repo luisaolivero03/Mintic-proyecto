@@ -7,22 +7,27 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+function createData(name, asignatura, grado, periodo1, periodo2, periodo3, periodo4) {
+  return { name, asignatura, grado, periodo1, periodo2, periodo3, periodo4 };
 }
 
 const rows = [
-  createData('1002154166', 237, 9.0, 37, 4.3),
-];
+  createData('1002154166', 'Matemáticas', 'Noveno', 90, 85, 78, 92),
+  createData('1002154166', '', '', 0,0 , 0,0 ),
+  createData('1002154166', '', '', 0,0 , 0,0 ),
+  createData('1002154166', '', '', 0,0 , 0,0 ),
+  createData('1002154166', '', '', 0,0 , 0,0 ),
 
+  // Agrega más filas según sea necesario
+];
 
 export default function Calificaciones() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table sx={{ minWidth: 650 }} aria-label="simple table"style={{ backgroundColor:"#BCECD1 "}}>
         <TableHead>
           <TableRow>
-            <TableCell>Codigo</TableCell>
+            <TableCell>Código</TableCell>
             <TableCell align="right">Asignatura</TableCell>
             <TableCell align="right">Grado</TableCell>
             <TableCell align="right">Periodo 1</TableCell>
@@ -32,20 +37,17 @@ export default function Calificaciones() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
+          {rows.map((row, index) => (
+            <TableRow key={row.name} style={{ backgroundColor: "#FFFFFF " }}>
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.Asignatura}</TableCell>
-              <TableCell align="right">{row.Grado}</TableCell>
-              <TableCell align="right">{row.Periodo1}</TableCell>
-              <TableCell align="right">{row.Periodo2}</TableCell>
-              <TableCell align="right">{row.Periodo3}</TableCell>
-              <TableCell align="right">{row.Periodo4}</TableCell>
+              <TableCell align="right">{row.asignatura}</TableCell>
+              <TableCell align="right">{row.grado}</TableCell>
+              <TableCell align="right">{row.periodo1}</TableCell>
+              <TableCell align="right">{row.periodo2}</TableCell>
+              <TableCell align="right">{row.periodo3}</TableCell>
+              <TableCell align="right">{row.periodo4}</TableCell>
             </TableRow>
           ))}
         </TableBody>
