@@ -7,6 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
+
 function createData(name, asignatura, grado, periodo1, periodo2, periodo3, periodo4) {
   return { name, asignatura, grado, periodo1, periodo2, periodo3, periodo4 };
 }
@@ -52,6 +53,6 @@ export default function Calificaciones() {
           ))}
         </TableBody>
       </Table>
-    </TableContainer>
+      </TableContainer>
   );
 }
