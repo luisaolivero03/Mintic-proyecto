@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import Card from "@components/Card";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import IconoCalificaciones from '../../img/icons8-calificaciones-40.png';
+import IconoCalificaciones from '../../img/calificaciones.png';
 import IconoHorario from '../../img/horario.png';
-import Iconoboletinesycertificados from '../../img/boletinesycertificados.png';
+import IconoCertificacion from '../../img/certificacion.png';
+import fondo from '../../img/fondo.png';
 
 const data1 = {
     username: 'Camilo',
@@ -22,41 +23,39 @@ const data2 = {
 export default function Home() {
 
     return (
-        <main className="flex flex-col items-center justify-between" style={{ height: '100vh', overflow: 'hidden' }}>
-  BIENVENIDOS ¿QUÉ DESEAS ELEGIR?
-  <div
-    className='flex flex-row gap-10 justify-center items-center'
-    style={{
-      backgroundImage: "url(/fondodecalificaciones.png)",
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      width: '100%',
-      height: '100%', // Ajusta la altura al 100% para cubrir toda la pantalla
-      margin: '0 auto',
-    }}
-  >
-    <Card className="bg-primary-500 text-white" style={{ backgroundColor: "#BCECD1", color: "black" }}>
-      <img src={IconoCalificaciones.src} alt="Icono de Calificaciones" />
-      <Link href="/calificaciones">
-        CALIFICACIONES
-      </Link>
-    </Card>
+        <div className="bg-secondary-gris p-4 ">
+            <Card className="bg-secondary-blanco text-black max-w-full h-[calc(100vh-148px)] !p-0 text-xs !rounded-lg ">
+                <div className=" bg-primary-500  w-full  p-1  rounded-t-lg  ">
+                    <p className="text-white not-italic text-base ml-2 font-semibold">Portal Estudiantil</p>
+                </div>
+                <div className="flex flex-row justify-around items-center h-full  w-full ">
 
-    <Card className="bg-primary-500 text-white" style={{ backgroundColor: "#BCECD1", color: "black" }}>
-      <img src={IconoHorario.src} alt="Icono de Horario" />
-      <Link href="/horarios">
-        HORARIOS
-      </Link>
-    </Card>
+                    {/* Esto centrará el contenido verticalmente */}
+                    {/*   <p className="text-center text-lg ">BIENVENIDOS ¿QUÉ DESEAS ELEGIR?</p> */}
 
-    <Card className="bg-primary-500 text-white" style={{ backgroundColor: "#BCECD1", color: "black" }}>
-      <img src={Iconoboletinesycertificados.src} alt="Icono de Boletines y Certificados" />
-      <Link href="/boletinycertificados"> 
-        BOLETINES Y CERTIFICADOS
-      </Link>
-    </Card>
-  </div>
-</main>
+                    <Card className="bg-secondary-blanco-hueso  w-44 h-44 text-xs transition cursor-pointer ${className ? className : 'bg-primary-50 hover:bg-primary-400 text-black hover:text-white border border-primary-500'}">
+                        <img className="w-28 h-28 items-center " src={IconoCalificaciones.src} />
+                        <Link href="/calificaciones">
+                          <p className=" not-italic text-sm font-semibold">CALIFICACIONES</p>  
+                        </Link>
+                    </Card>
 
-    )}
+                    <Card className="bg-secondary-blanco-hueso  w-44 h-44 text-xs transition cursor-pointer ${className ? className : 'bg-primary-50 hover:bg-primary-400 text-black hover:text-white border border-primary-500'}">
+                        <img className="w-28 h-28 items-center " src={IconoHorario.src} />
+                        <Link href="/calificaciones">
+                          <p className=" not-italic text-sm font-semibold">HORARIO</p>  
+                        </Link>
+                    </Card>
+
+                    <Card className="bg-secondary-blanco-hueso  w-44 h-44 text-xs transition cursor-pointer ${className ? className : 'bg-primary-50 hover:bg-primary-400 text-black hover:text-white border border-primary-500'}">
+                        <img className="w-28 h-28 items-center " src={IconoCertificacion.src} />
+                        <Link href="/calificaciones">
+                          <p className=" not-italic text-sm font-semibold text-center">BOLETINES Y CERTIFICADOS</p>  
+                        </Link>
+                    </Card>
+
+                </div>
+            </Card>
+        </div>
+    );
+}
