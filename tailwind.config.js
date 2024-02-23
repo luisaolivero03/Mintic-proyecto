@@ -25,7 +25,9 @@ module.exports = {
           '950': '#062d12',
         },
         secondary: {
-          
+          'gris' : '#ebf2f2',
+          'blanco': '#fffffd',
+          'blanco-hueso': '#F8F8FF',
         }
       }
     },
