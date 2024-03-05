@@ -1,9 +1,24 @@
+"use client";
 import React from 'react';
 import Table from "@components/Table";
 import Button from '@mui/material/Button';
 import Link from 'next/link';
+import useAppContext from "@hooks/useAppContext";
+
+const data1 = {
+  username: "Camilo",
+  id: 1002211875,
+  role: "Student",
+};
+const data2 = {
+  username: "Luisa",
+  id: 1002211876,
+  role: "Teacher",
+};
 
 const Notes = () => {
+  const { user } = useAppContext(); // Asegúrate de que este hook esté disponible
+
   return (
     <div className='relative flex flex-col items-center gap-20 p-20 justify-center z-10 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-100'
       style={{
@@ -21,7 +36,7 @@ const Notes = () => {
     >
       <div className="flex justify-between w-full">
         {/* Botón para regresar al login */}
-        <Link href="/" passHref>
+        <Link href="/dashboard" passHref>
           <Button
             variant="contained"
             disableElevation
@@ -29,17 +44,18 @@ const Notes = () => {
             Regresar al Login
           </Button>
         </Link>
-        {/* Botón para agregar nota */}
-        <Button
-          variant="contained"
-          disableElevation
-        >
-          Imprimir 
-        </Button>
-      </div>
+      
+        {/* Botón para agregar/modificar nota solo para profesores */}
+        {user.role === "teacher" && (
+          <Button
+            variant="contained"
+            disableElevation
+          > Modificar nota </Button>
+        )}
+      </div>  
       {/* Tabla centrada */}
       <Table style={{ margin: 'auto' }} />
-    </div>
+    </div> 
   );
 }
 

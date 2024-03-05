@@ -78,6 +78,9 @@ const Form = ({ variant }) => {
           placeholder="Fecha de expedición"
         />
       </label>
+      <button onClick={handleSubmitTeacherForm} type="button">
+          Ingresar Estudiante
+        </button>
     </form>
   );
 };
