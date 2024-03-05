@@ -42,7 +42,7 @@ export default function Home() {
 
                     <Card className="bg-secondary-blanco-hueso  w-44 h-44 text-xs transition cursor-pointer ${className ? className : 'bg-primary-50 hover:bg-primary-400 text-black hover:text-white border border-primary-500'}">
                         <img className="w-28 h-28 items-center " src={IconoHorario.src} />
-                        <Link href="/calificaciones">
+                        <Link href="/horario">
                           <p className=" not-italic text-sm font-semibold">HORARIO</p>  
                         </Link>
                     </Card>
