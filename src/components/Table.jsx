@@ -13,11 +13,11 @@ function createData(name, asignatura, grado, periodo1, periodo2, periodo3, perio
 }
 
 const rows = [
-  createData('1002154166', 'Matemáticas', 'Noveno', 90, 85, 78, 92),
-  createData('1002154166', '', '', 0,0 , 0,0 ),
-  createData('1002154166', '', '', 0,0 , 0,0 ),
-  createData('1002154166', '', '', 0,0 , 0,0 ),
-  createData('1002154166', '', '', 0,0 , 0,0 ),
+  createData('1002154166','Sandra Diaz', 'Matemáticas', 'Noveno', 90, 85, 78, 92,),
+  createData('1002154166', 'Sandra Diaz','Geometria', 'Noveno', 0,0 , 0,0, ),
+  createData('1002154166', '','', '', 0,0 , 0,0 ),
+  createData('1002154166', '','', '', 0,0 , 0,0 ),
+  createData('1002154166', '','', '', 0,0 , 0,0 ),
 
   // Agrega más filas según sea necesario
 ];
@@ -29,6 +29,7 @@ export default function Calificaciones() {
         <TableHead>
           <TableRow>
             <TableCell>Código</TableCell>
+            <TableCell align="right">Nombre del estudiante</TableCell>
             <TableCell align="right">Asignatura</TableCell>
             <TableCell align="right">Grado</TableCell>
             <TableCell align="right">Periodo 1</TableCell>
@@ -48,6 +49,7 @@ export default function Calificaciones() {
               <TableCell align="right">{row.periodo1}</TableCell>
               <TableCell align="right">{row.periodo2}</TableCell>
               <TableCell align="right">{row.periodo3}</TableCell>
+              <TableCell align="right">{row.periodo4}</TableCell>
               <TableCell align="right">{row.periodo4}</TableCell>
             </TableRow>
           ))}
