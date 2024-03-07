@@ -103,12 +103,10 @@ const Login = () => {
                   onClick={() => {
                     setSelectedTab({
                       step: 0,
-                      variant: null,
-                    });
-                  }}
-                >
-                  Volver
-                </button>
+                       variant: null,
+                         });
+                   }}
+                 className="text-white px-4 py-2 rounded"> Volver </button>
               </div>
             </Stepper>
           </div>
